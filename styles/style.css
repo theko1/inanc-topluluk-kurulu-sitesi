@@ -1,0 +1,282 @@
+/* Temel Stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+nav {
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+section {
+    margin: 20px 0;
+}
+
+/* ===== SADECE HAKKIMIZDA SAYFASI ===== */
+
+.hakkimizda-sayfasi section h2 {
+    color: #000000; /* Mavi başlık */
+    border-bottom: 2px solid #ddd; /* Alt çizgi */
+    padding-bottom: 5px; /* Çizgi ile metin arası boşluk */
+}
+
+.hakkimizda-sayfasi section ul {
+    margin-left: 20px; /* Liste içeriği biraz sağa kayacak */
+    list-style-type: square; /* Kare şeklinde liste işaretleri */
+}
+
+.hakkimizda-sayfasi footer {
+    background-color: #f0f0f0; /* Footer arkaplan rengi */
+    padding: 15px; /* İç boşluk */
+}
+
+.hakkimizda-sayfasi {
+    background-color: #f9f9f9; /* Açık gri arkaplan */
+    font-family: 'Arial', sans-serif; /* Yazı tipi */
+}
+
+/* SADECE FAALİYETLER SAYFASINA ÖZEL STİLLER */
+.toplantı {
+    background-color: #f9f9f9; /* Açık gri arka plan */
+    border-left: 4px solid #007bff; /* Sol kenarda mavi bir çizgi */
+    padding: 15px; /* İçerik ile kenarlar arasında boşluk */
+    margin-bottom: 20px; /* Alt kısımda boşluk */
+}
+
+.karar {
+    font-weight: bold; /* Kalın yazı */
+    color: #007bff; /* Mavi renk */
+}
+
+.proje {
+    background-color: #f1f1f1; /* Projeler için açık gri arka plan */
+    padding: 10px; /* İçerik ile kenarlar arasında boşluk */
+    margin-bottom: 15px; /* Alt kısımda boşluk */
+    border: 1px solid #ddd; /* İnce bir kenarlık */
+}
+
+/* ===== SADECE ÜYELER/INDEX SAYFASI ===== */
+
+.uye {
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    width: 150px;
+}
+
+.uye img {
+    width: 120px; /* Fotoğraf genişliği */
+    height: 160px; /* Fotoğraf yüksekliği */
+    object-fit: cover; /* Fotoğrafın düzgün şekilde sığmasını sağlar */
+    border-radius: 0; /* Yuvarlaklığı kaldırır, dörtgen yapar */
+    border: 2px solid #ddd; /* İsteğe bağlı: Fotoğraf çevresine ince bir kenarlık */
+}
+
+.uye h2 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Üyeler Container */
+.uyeler-container {
+    display: flex;
+    flex-wrap: wrap; /* Kartların satırdan taşmasını engeller */
+    gap: 10px; /* Kartlar arasındaki boşluk */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; /* Container genişliği */
+
+    background: #f9f9f9;
+    max-height: 2000px; /* Başlangıçta kapalı */
+    transition: max-height 0.5s ease; /* Yumuşak geçiş animasyonu */
+}
+
+.uyeler-container.expanded {
+    max-height: 2000px; /* Açıldığında yeterince büyük bir değer */
+}
+
+/* Üye Kartı */
+.uye-card {
+    display: flex;
+    align-items: center; /* Fotoğraf ve metni dikeyde ortalar */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    flex-basis: 15%; /* Kart genişliği: Dinamik olarak ayarlanır */
+    max-width: 1000px; /* Kartın maksimum genişliği */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/* Üye Fotoğrafı */
+.uye-foto {
+    width: 100px; /* Fotoğraf genişliği */
+    height: 100px; /* Fotoğraf yüksekliği */
+    border-radius: 5px; /* Hafif yuvarlatılmış köşeler */
+    object-fit: cover; /* Fotoğrafın düzgün şekilde sığmasını sağlar */
+    margin-right: 3px; /* Fotoğraf ile metin arasındaki boşluk */
+}
+
+/* Üye Bilgileri */
+.uye-info {
+    padding: 10px;
+}
+
+.uye-info h3 {
+    font-size: 18px; /* Üye adı yazı boyutu */
+    margin: 0;
+    color: #333;
+}
+
+.uye-info p {
+    font-size: 12px; /* Üye rolü yazı boyutu */
+    margin: 5px 0 0 0;
+    color: #555;
+}
+
+.uyeler-baslik {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+/* Accordion Stilleri */
+.accordion {
+    background-color: #eee;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 19px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #e0e0e0;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; /* Başlangıçta kapalı */
+    overflow: hidden; /* İçeriğin taşmasını gizler */
+    transition: max-height 0.2s ease-out; /* Yumuşak geçiş animasyonu */
+}
+
+.panel.expanded {
+    max-height: 2000px; /* Açıldığında yeterince büyük bir değer */
+}
+
+/* ekran boyutlarına göre kart boyutlarını ayarlama*/
+@media (max-width: 1200px) {
+    .uye-card {
+        flex-basis: 20%; /* Daha küçük ekranlarda 5 sütun */
+    }
+}
+
+@media (max-width: 992px) {
+    .uye-card {
+        flex-basis: 25%; /* Daha küçük ekranlarda 4 sütun */
+    }
+}
+
+@media (max-width: 768px) {
+    .uye-card {
+        flex-basis: 33.33%; /* Daha küçük ekranlarda 3 sütun */
+    }
+}
+
+@media (max-width: 576px) {
+    .uye-card {
+        flex-basis: 50%; /* Daha küçük ekranlarda 2 sütun */
+    }
+}
+
+/* Foto yukarıda isim ve rol aşağıda olan düzene geçmek isterseniz aşağıdaki css i kullanabilirsiniz */
+@media DISABLED {
+    .uyeler-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid yapısı */
+        gap: 20px; /* Kartlar arasındaki boşluk */
+        padding: 10px;
+        border-radius: 5px;
+        height: 0px; /* Başlangıçta kapalı */
+        width: 100%;
+        overflow: hidden;
+        border-top: solid 2px rgba(0, 0, 0, 0.3);
+        border-bottom: solid 2px rgba(0, 0, 0, 0.3);
+        background: #f9f9f9;
+        transition: height 0.5s ease; /* Animasyon */
+    }
+    
+    .uyeler-container.expanded {
+        height: auto; /* Açıldığında içeriğin boyutuna göre ayarlanır */
+    }
+    
+    .uye-card {
+        text-align: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        width: 150px; /* Kart genişliği */
+        margin: 10px auto; /* Ortalanmış */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    }
+    
+    .uye-card img {
+        width: 100px; /* Fotoğraf genişliği */
+        height: 100px; /* Fotoğraf yüksekliği */
+        border-radius: 50%; /* Yuvarlak fotoğraf */
+        object-fit: cover; /* Fotoğrafın düzgün şekilde sığmasını sağlar */
+        margin-bottom: 10px; /* Fotoğraf ile metin arasındaki boşluk */
+    }
+    
+    .uye-card h3 {
+        font-size: 14px; /* Üye adı yazı boyutu */
+        margin: 0;
+        color: #333;
+    }
+    
+    .uye-card p {
+        font-size: 12px; /* Üye rolü yazı boyutu */
+        margin: 5px 0 0 0;
+        color: #555;
+    }
+}
+
+/* SADECE ALT KURULLAR SAYFASI */
+.alt-kurullar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.alt-kurul h2 a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.alt-kurul h2 a:hover {
+    text-decoration: underline;
+}
+
+.alt-kurul p {
+    margin: 5px 0 0 0;
+    color: #555;
+}
+
+
+
