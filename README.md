@@ -1,4 +1,4 @@
-* TEV İnanç Lisesi'nin öğrenci, öğretmen, idareci ve çalışan sorunlarının tartışıldığı meclisinin yani Topluluk Kurulu'nun internet sayfası.
+#### TEV İnanç Lisesi'nin öğrenci, öğretmen, idareci ve çalışan sorunlarının tartışıldığı meclisinin yani Topluluk Kurulu'nun internet sayfası.
 
 Bu repoyu diğer liselerden arkadaşlar da forklayıp kendi okullarına ve kurullarına göre şekillendirebilirler. Bu sitenin yapısı İnanç Lisesi'nin Topluluk Kurulu Tüzüğü'ne göre şekillendirilmiştir.
 
