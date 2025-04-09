@@ -1,6 +1,8 @@
 * TEV İnanç Lisesi'nin öğrenci, öğretmen, idareci ve çalışan sorunlarının tartışıldığı meclisinin yani Topluluk Kurulu'nun internet sayfası.
 
-Bu repoyu diğer liselerden arkadaşlar da forklayıp kendi okullarına ve kurullarına göre şekillendirebilirler. Bu sitenin yapısı İnanç Lisesi'nin Topluluk Kurulu Tüzüğü'ne göre şekillendirilmiştir. 
+Bu repoyu diğer liselerden arkadaşlar da forklayıp kendi okullarına ve kurullarına göre şekillendirebilirler. Bu sitenin yapısı İnanç Lisesi'nin Topluluk Kurulu Tüzüğü'ne göre şekillendirilmiştir.
+
+Şuan websitesi hala geliştirme aşamasındadır ama istenilen temel site yapısı tamamlanmıştır. Sitedeki bütün isimler, notlar vs. placeholderdır.
 
 Site kolayca hostlanabilmesi için statik olarak yazılmıştır. HTML, CSS ve JS dışında dil kullanılmamıştır. Eğer sizin daha iyi hosting imkanlarınız varsa kendi forkunuz da backend yazabilirsiniz. 
 
